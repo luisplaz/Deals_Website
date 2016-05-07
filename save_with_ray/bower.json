@@ -1,0 +1,22 @@
+{
+  "name": "save_with_ray",
+  "homepage": "https://github.com/luisplaz/Deals_Website",
+  "authors": [
+    "luisplaz <luisplaz@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "^3.3.6"
+  }
+}
