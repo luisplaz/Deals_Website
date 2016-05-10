@@ -1,4 +1,4 @@
-angular.module('saveray')
+angular.module('SaveWithRay')
 .controller('PostsCtrl', [
 	'$scope',
 	'$stateParams',
