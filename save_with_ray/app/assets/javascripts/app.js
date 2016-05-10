@@ -1,22 +1,34 @@
-angular.module('saveray', ['ui.router', 'templates'])
-
+angular.module('SaveWithRay', ['ui.router', 'templates'])
 .config([
 	'$stateProvider',
 	'$urlRouterProvider',
 	function($stateProvider, $urlRouterProvider) {
-
 		$stateProvider
 		.state('home', {
 			url: '/home',
 			templateUrl: 'home/_home.html',
-			controller: 'MainCtrl'
+			controller: 'MainCtrl',
+			resolve: {
+				postPromise: ['posts', function(posts){
+					return posts.getAll();
+				}]
+			}
 		})
 		.state('posts', {
 			url: '/posts/{id}',
 			templateUrl: 'posts/_posts.html',
 			controller: 'PostsCtrl'
-		});
-
+		})
+		.state('side', {
+			url: '/side',
+			templateUrl: 'side/_side.html',
+			controller: 'SideCtrl',
+			resolve: {
+				postPromise: ['posts', function(posts){
+					return posts.getAll();
+				}]
+			}
+		})
 		$urlRouterProvider.otherwise('home');
 	}])
 
