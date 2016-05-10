@@ -1,4 +1,4 @@
-angular.module('saveray')
+angular.module('SaveWithRay')
 .factory('posts', [ '$http',
 	function($http){
 
