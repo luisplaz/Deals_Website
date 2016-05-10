@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(version: 20160510151134) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "name"
-    t.string   "body"
+    t.string   "title"
     t.string   "link"
+    t.string   "body"
     t.integer  "upvotes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
